@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Advent Calendar</title>
+
+    <link rel="stylesheet" href="dist/css/style.css">
+    <meta name="spreadsheet" content="1SNSyobtDMG1sNqz-J2F9wg17B3dnRCyiXzotjsh7NuA">
+  </head>
+  <body>
+    <header>
+      <!-- Site Title -->
+      <h1>Simple Advent Calendar</h1>
+    </header>
+
+    <main>
+      <div class="description">
+        <!-- Description -->
+        <p>
+          <a href="https://meiji-ncc.tech">NCC</a>の贈るAdvent Calendar 2015
+        </p>
+      </div>
+
+      <div id="calendar"></div>
+      <ul class="entries"></ul>
+    </main>
+
+    <!-- ***************** -->
+    <!-- DO NOT EDIT BELOW -->
+    <!-- ***************** -->
+    <template id="calTemplate">
+      <a href="http://example.com">
+        <p class="thumb">
+          <!-- Thumbnail -->
+          <img alt="thumbnail">
+        </p>
+        <p class="account">
+          <!-- Account Name -->
+        </p>
+      </a>
+    </template>
+
+    <template id="listTemplate">
+      <li>
+        <time>XX/XX</time>
+        <img class="thumb">
+        <span class="account">
+          <span class="name">
+            @example
+          </span>
+        </span>
+        <span class="article-title">
+          <a href="http://example.com">
+            テスト用記事
+          </a>
+        </span>
+      </li>
+    </template>
+
+    <script src="dist/js/bundle.js"></script>
+  </body>
+</html>

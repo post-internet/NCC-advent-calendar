@@ -1,0 +1,164 @@
+@import "normalize.css/normalize.css";
+@import "fullcalendar/dist/fullcalendar.css";
+
+:root {
+  --saturday-color: #7986cb;
+  --sunday-color: #e57373;
+  --weekday-color: #90A4AE;
+  --text-white-color: #FAFAFA;
+  --text-black-color: #616161;
+  --content-width: 1000px;
+  --main-background: #EEEEEE;
+  --content-background: #FAFAFA;
+  --border-black: #E0E0E0 solid 1px;
+  --gothic-font-family:
+    Avenir, "Helvetica Neue", Helvetica,
+    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+    Verdana, Arial, "Open Sans", Roboto,
+    "游ゴシック", "Yu Gothic",
+    "メイリオ", Meiryo,
+    "ＭＳ Ｐゴシック", "MS PGothic",
+    "TakaoEXゴシック", "TakaoExGothic",
+    sans-serif;
+}
+
+body {
+  background: #EEEEEE;
+  font-family: var(--gothic-font-family);
+}
+
+img {
+  opacity: 0.0;
+  transition: opacity 1s ease 0;
+}
+
+header {
+  color: var(--text-white-color);
+  background: #3949AB;
+  padding: 50px 0 50px 0;
+  min-width: 1020px;
+
+  h1 {
+    font-size: 30px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    width: var(--content-width);
+  }
+}
+
+main {
+  width: var(--content-width);
+  background: var(--main-background);
+  color: var(--text-black-color);
+  margin: auto;
+  padding: 20px 10px 20px 10px;
+}
+
+#calendar {
+  margin: auto;
+  width: var(--content-width);
+  opacity: 0;
+
+  a, a:hover, a:visited {
+    color: var(--text-black-color);
+    &[href="#"] {
+      text-decoration: none;
+      cursor: default;
+    }
+  }
+}
+
+.fc-view-container {
+  background: var(--content-background);
+}
+
+th.fc-day-header {
+  background: var(--weekday-color);
+  color: var(--text-white-color);
+  font-size: 15px;
+  height: 50px;
+  padding-left: 15px;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &.fc-sun {
+    background: var(--sunday-color);
+  }
+  &.fc-sat {
+    background: var(--saturday-color);
+  }
+}
+
+td.fc-day-number {
+  color: var(--weekday-color);
+  font-size: 25px;
+
+  &.fc-sun {
+    color: var(--sunday-color);
+  }
+  &.fc-sat {
+    color: var(--saturday-color);
+  }
+  &.fc-other-month {
+    opacity: 0.1;
+  }
+  p {
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: center;
+    color: var(--text-black-color);
+
+    &.thumb img {
+      border-radius: 50%;
+      border: var(--border-black);
+      width: 48px;
+      height: 48px;
+    }
+  }
+}
+
+.entries {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    background: var(--content-background);
+    border-top: var(--border-black);
+    border-bottom: var(--border-black);
+
+    time {
+      width: 10%;
+      text-align: center;
+      font-weight: bold;
+      padding: 0 5px;
+    }
+    img.thumb {
+      border-radius: 50%;
+      border: var(--border-black);
+      width: 24px;
+      height: 24px;
+    }
+    .account {
+      width: 20%;
+      padding: 0 5px;
+      a {
+        text-decoration: none;
+      }
+    }
+    .article-title {
+      width: auto;
+      padding: 0 5px;
+    }
+    a, a:hover, a:visited {
+      color: var(--text-black-color);
+      &[href="#"] {
+        text-decoration: none;
+        cursor: default;
+      }
+    }
+  }
+}
